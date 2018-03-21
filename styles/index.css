@@ -2,7 +2,8 @@
 	width: 25%;
 	height: 200px;
 	min-height: 6.5em;
-	margin: 10%;
+	margin: auto;
+	text-align: center;
 	background-color: #2222EE;
 	color: white;
 	border-radius: 0.75em;
