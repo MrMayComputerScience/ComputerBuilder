@@ -1,4 +1,6 @@
 "use strict"
+
+
 function makeDraggables(){
 	interact(".draggable")
 		.draggable({
@@ -10,7 +12,7 @@ function makeDraggables(){
 			},
 			autoScroll: true,
 			onmove: dragMoveListener
-		});
+	});
 	interact(".dropzone")
 		.dropzone({
 			accept: "#drag-one",
@@ -24,22 +26,23 @@ function makeDraggables(){
 				dzElement.classList.add("drop-target");
 				dragElement.classList.add("can-drop");
 				console.log("Entered");
-				dragElement.textContext = "Can Drop";
+				dragElement.textContent = "Can Drop";
 			},
 			ondragleave: function(evt){
 				evt.target.classList.remove("drop-target")
 				evt.relatedTarget.classList.remove("can-drop");
-				evt.relatedTarget.textContext = "Dragged Out";
+				evt.relatedTarget.textContent = "Dragged Out";
 			},
 			ondrop: function(evt){
-				evt.relatedTarget.textContext = "Dropped";
+				evt.relatedTarget.textContent = "Dropped";
 			},
 			ondropdeactivate: function(evt){
 				evt.target.classList.remove("drop-active");
 				evt.target.classList.remove("drop-target");
 			}
-		});
+	});
 }
+
 function dragMoveListener(evt){
 	var target = evt.target, x, y;
 	x = (parseFloat(target.getAttribute("data-x")) || 0) + evt.dx;

@@ -1,5 +1,5 @@
 #drag-one{
-	width: 100px;
+	width: 20%;
 	height: 50px;
 	min-height: 6.5em;
 	margin: 10%;
@@ -21,6 +21,7 @@
 }
 
 .dropzone {
+  height: 40%;
   background-color: #ccc;
   border: dashed 4px transparent;
   border-radius: 4px;
