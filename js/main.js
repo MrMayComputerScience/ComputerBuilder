@@ -32,9 +32,11 @@ function makeDraggables(){
 				evt.target.classList.remove("drop-target")
 				evt.relatedTarget.classList.remove("can-drop");
 				evt.relatedTarget.textContent = "Dragged Out";
+				document.getElementById("continueButton").style.visibility = "hidden";
 			},
 			ondrop: function(evt){
 				evt.relatedTarget.textContent = "Dropped";
+				document.getElementById("continueButton").style.visibility = "visible";
 			},
 			ondropdeactivate: function(evt){
 				evt.target.classList.remove("drop-active");
