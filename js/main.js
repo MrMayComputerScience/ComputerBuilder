@@ -6,7 +6,7 @@ function makeDraggables(){
 		.draggable({
 			inertia: true,
 			restrict: {
-				restriction: "container",
+				restriction: "#container",
 				endOnly: true,
 				elementRect: {top: 0, left: 0, bottom: 1, right: 1}
 			},

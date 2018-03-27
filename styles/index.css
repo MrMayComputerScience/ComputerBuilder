@@ -3,14 +3,42 @@
     height: auto;
 }
 
-#ram1-drop{
-    position: relative;
+#container{
+}
 
+#motherboard{
+  position: relative;
+  width: 100%;
+  height: 90%;
+}
+
+#motherboard img{
+  width: 100%;
+  height: 100%;
+
+}
+
+#ram1-drop{
+    position: absolute;
+    left: 35%;
+    top: 7%;
     width: 11%;
     height:50%;
-
     background-color: white;
+
 }
+
+#ram2-drop{
+    position: absolute;
+    left: 68%;
+    top: 7%;
+    width: 11%;
+    height:50%;
+    background-color: white;
+
+}
+
+
 .ram{
     width: 10%;
     background-color: white;
@@ -20,9 +48,4 @@
 .ram img{
     width: 100%;
     height: 50%;
-}
-
-#container{
-    width: 100%;
-    height: 100%;
 }
