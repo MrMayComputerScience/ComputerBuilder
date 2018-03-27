@@ -7,15 +7,21 @@
 		<link rel="stylesheet" type="text/css" href="styles/index.css"></link>
 	</head>
 	<body bgcolor="#AAAAAA" onload="makeDraggables()">
-		<div id= "container">
-			<div id="ram-1" class="draggable">
-				<p>text</p>
-			</div>
-			<div class="dropzone">
-				<p>This is the drop zone<p/>
-			</div>
-			<iframe id="myFrame"></iframe>
-			<button id="continueButton" onclick="setFrame()" style="visibility: hidden">Ayy!</button>
-		</div>
+        <div id="container">
+            <div id="motherboard">
+            	<img src="img/motherboard.png">
+            	<div id="ram1-drop" class="dropzone"></div>
+            	<div id="ram2-drop" class="dropzone"></div>
+            	<div id="cpu-drop" class="dropzone"></div>
+            	<div id="gpu-drop" class="dropzone"></div>
+            	<div id="power-drop" class="dropzone"></div>
+            </div>
+            <div id="ram1" class="draggable ram">
+                <img src="img/Ram1.png">
+            </div>
+            <div id="ram2" class="draggable ram" display>
+                <img src="img/Ram2.png">
+            </div>
+        </div>
 	</body>
 </HTML>
