@@ -4,7 +4,8 @@
 
 }
 .ram{
-     width: 7%;
+    position: absolute;
+    width: 7%;
 }
 .ram img{
     width:100%;
