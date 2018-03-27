@@ -4,11 +4,19 @@
 
 }
 .ram{
-    position: absolute;
+   
     width: 7%;
 }
 .ram img{
     width:100%;
+    height:auto;
+}
+#motherboard{
+    width: auto;
+    height: auto;
+}
+#motherboard img{
+    width:60%;
     height:auto;
 }
 #container{

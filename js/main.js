@@ -43,7 +43,9 @@ function makeDraggables(){
 			}
 	});
 }
-
+function onResizeCb(evt){
+    
+}
 function dragMoveListener(evt){
 	var target = evt.target, x, y;
 	x = (parseFloat(target.getAttribute("data-x")) || 0) + evt.dx;
