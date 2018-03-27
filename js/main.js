@@ -2,8 +2,15 @@
 
 onResizeCb.oldWidth = window.innerWidth;
 onResizeCb.oldHeight = window.innerHeight;
+function checkWindowSize(){
+    if(window.outerHeight != 1040 || window.outerWidth != 1920){
+        alert("Get a good monitor plx");
+        window.close();
+    }
+}
 function makeDraggables(){
     window.addEventListener("resize", onResizeCb, true);
+    
 	interact(".draggable")
 		.draggable({
 			inertia: true,
