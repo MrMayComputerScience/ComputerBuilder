@@ -50,8 +50,8 @@ function onResizeCb(evt){
     var elems = document.getElementsByClassName("draggable");
     for(let i = 0; i < elems.length; i++){
         let e = elems[i];
-        let datax = Number(e.getAttribute("data-x"));
-        let datay = Number(e.getAttribute("data-y"));
+        let datax = parseFloat(e.getAttribute("data-x"));
+        let datay = parseFloat(e.getAttribute("data-y"));
         let width = window.innerWidth;
         let height = window.innerHeight;
         let dx = width - onResizeCb.oldWidth;
