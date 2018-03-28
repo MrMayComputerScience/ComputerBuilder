@@ -2,15 +2,23 @@
 
 onResizeCb.oldWidth = window.innerWidth;
 onResizeCb.oldHeight = window.innerHeight;
-function checkWindowSize(){
-    if(window.outerHeight != 1040 || window.outerWidth != 1920){
-        alert("Get a good monitor plx");
-        window.close();
-    }
+
+//Function to retrieve the CSS property of an object as it was defined in its CSS file
+//@returns - a string representation of the property value
+function getDefaultStyle(element, prop) {
+    var parent = element.parentNode,
+        computedStyle = getComputedStyle(element),
+        value;
+    parent.style.display = 'none';
+    value = computedStyle.getPropertyValue(prop);
+    parent.style.removeProperty('display');
+    return value;
 }
-function makeDraggables(){
+
+//Function callen when the body in index.html loads. 
+//It initializes the drag-n-drop features and adds window listeners
+function onBodyLoad(){
     window.addEventListener("resize", onResizeCb, true);
-    
 	interact(".draggable")
 		.draggable({
 			inertia: true,
@@ -53,6 +61,7 @@ function makeDraggables(){
 			}
 	});
 }
+//Callback for when the window resizes. 
 function onResizeCb(evt){
     var elems = document.getElementsByClassName("draggable");
     for(let i = 0; i < elems.length; i++){
@@ -73,15 +82,35 @@ function onResizeCb(evt){
         e.style.transform = "translate("+datax+"px, "+datay+"px)";
     }
 }
+//Callback for when a draggable gets dragged
 function dragMoveListener(evt){
-	var target = evt.target, x, y;
-	x = (parseFloat(target.getAttribute("data-x")) || 0) + evt.dx;
-	y = (parseFloat(target.getAttribute("data-y")) || 0) + evt.dy;
-	target.style.transform = "translate("+x+"px, "+y+"px)";
-	target.setAttribute('data-x', x);
-    target.setAttribute('data-y', y);
+    
+	var target = evt.target, 
+        x, y, 
+        container;
+    
+    container = document.getElementById("container");
+    
+    var cx = container.getBoundingClientRect().width, 
+        cy = container.getBoundingClientRect().height;
+    
+    var pctx = evt.dx/cx * 100, pcty = evt.dy/cy * 100;
+    
+    //If the inline style has already been modified, base the change on that
+    //else, use the default value
+    if(target.style.top){
+        x = parseFloat(target.style.left) + pctx;
+        y = parseFloat(target.style.top) + pcty;    
+    }
+    else{
+        x = parseFloat(getDefaultStyle(target, "left")) + pctx;
+        y = parseFloat(getDefaultStyle(target, "top")) + pcty;
+    }
+    target.style.left = x + "%";
+    target.style.top = y + "%";
+    
 }
-
+//Loads index.html into an iFrame on the page
 function setFrame(){
 	var myFrame = document.getElementById("myFrame");
 	myFrame.style.width = window.innerWidth/2 + "px"
