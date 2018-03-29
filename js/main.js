@@ -11,6 +11,7 @@ function getDefaultStyle(element, prop) {
     parent.style.removeProperty('display');
     return value;
 }
+
 //Abstraction of dropzone code. Sets all elements that match the CSS selector string "selector"
 //to be dropzines that accept all elements that match the CSS selector string "accepts"
 function setDropzone(selector, accepts){
@@ -43,8 +44,10 @@ function onBodyLoad(){
 			onmove: dragMoveListener
 	});
 	setDropzone(".ram-dz", ".ram");
-	setDropzone(".ps-dz",".PowerSupply")
-	
+
+	setDropzone(".ps-dz",".PowerSupply");
+	setDropzone(".GPU-dz","#Graphics");
+	setDropzone("#cpu-dz", "#cpu");
 }
 
 //Callback for when a draggable gets dragged
