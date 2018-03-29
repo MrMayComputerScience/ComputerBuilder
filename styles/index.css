@@ -13,6 +13,19 @@
 	top:50px;
 	left:1300px;
 }
+#monitor{
+    position: absolute;
+    top: 20px;
+    left: 1600px;
+    background-color: black; 
+}
+#frame{
+    position:absolute;
+    top: 60px;
+    left: 45px;
+    width: 1800px;
+    height: 800px;
+}
 .draggable{
     border-color: black;
     border-width: 2px;

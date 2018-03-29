@@ -34,6 +34,7 @@ function setDropzone(selector, accepts){
                     h = parseFloat(getStyleProperty(target, "height"));
                 console.log("w: "+w + ", h: "+h);
                 particleExplosion(evt.target, 0.5*w, 0.5*h, 10);
+                
 			},
 	});
 }

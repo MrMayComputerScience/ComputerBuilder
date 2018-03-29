@@ -1,6 +1,6 @@
 const __particleSize__ = {
-	w: "40px",
-	h: "40px"
+	w: "25px",
+	h: "25px"
 };
 const __lifeTime__ = 2;
 function __createParticle__(fileName, parent, xpos, ypos){
