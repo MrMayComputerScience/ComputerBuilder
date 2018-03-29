@@ -11,6 +11,8 @@ function getDefaultStyle(element, prop) {
     parent.style.removeProperty('display');
     return value;
 }
+//Abstraction of dropzone code. Sets all elements that match the CSS selector string "selector"
+//to be dropzines that accept all elements that match the CSS selector string "accepts"
 function setDropzone(selector, accepts){
     interact(selector)
 		.dropzone({
@@ -19,8 +21,6 @@ function setDropzone(selector, accepts){
             //  -Make so dz must be fully covered, pct of area??
 			overlap: 0.4,
 			ondrop: function(evt){
-                //TODO: some code that aligns the dropped element to the top-left corner of the dropzone
-                
 				evt.relatedTarget.classList.remove("draggable");
                 
 			},
@@ -43,6 +43,7 @@ function onBodyLoad(){
 			onmove: dragMoveListener
 	});
 	setDropzone(".ram-dz", ".ram");
+	
 }
 
 //Callback for when a draggable gets dragged
