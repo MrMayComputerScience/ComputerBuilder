@@ -34,7 +34,18 @@ function setDropzone(selector, accepts){
                     h = parseFloat(getStyleProperty(target, "height"));
                 console.log("w: "+w + ", h: "+h);
                 particleExplosion(evt.target, 0.5*w, 0.5*h, 10);
-                
+                if(document.getElementsByClassName("draggable").length == 0){
+                    let frame = document.getElementById("frame");
+                    let index;
+                    if((index = location.href.indexOf("?id=")) >= 0){
+                        index += "?id=".length;
+                        let id = parseInt(location.href.substr(id));
+                        frame.src = "index.html?id="+(++id);
+                    }
+                    else{
+                        frame.src = "index.html?id=0";
+                    }
+                }
 			},
 	});
 }
