@@ -3,6 +3,11 @@
     top: 10px;
     left: 10px;
 }
+.PowerSupply{
+	position: absolute;
+	top:10px;
+	left:10px;
+}
 .draggable{
     border-color: black;
     border-width: 2px;
@@ -21,12 +26,24 @@
 #motherboard{
     width: 1200px;
 }
+#motherboard #power-dz{
+	position:absolute;
+	top:400px;
+	left: 50px;
+}
 #motherboard img{
     width: 100%;
 }
 .ram-dz{
     width: 90px;
     height: 300px;
+    border-style: dashed;
+    border-color: aliceblue;
+    border-width: 2px;
+}
+.ps-dz{
+    width: 270px;
+    height: 200px;
     border-style: dashed;
     border-color: aliceblue;
     border-width: 2px;

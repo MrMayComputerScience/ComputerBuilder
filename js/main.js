@@ -43,6 +43,7 @@ function onBodyLoad(){
 			onmove: dragMoveListener
 	});
 	setDropzone(".ram-dz", ".ram");
+	setDropzone(".ps-dz",".PowerSupply")
 	
 }
 
