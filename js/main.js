@@ -53,6 +53,9 @@ function onBodyLoad(){
 			onmove: dragMoveListener
 	});
 	setDropzone(".ram-dz", ".ram");
+
+	setDropzone(".ps-dz",".PowerSupply");
+	setDropzone(".GPU-dz","#Graphics");
 	setDropzone("#cpu-dz", "#cpu");
 }
 

@@ -8,6 +8,11 @@
     top: 700px;
     left: 100px;
 }
+.PowerSupply{
+	position: absolute;
+	top:50px;
+	left:1300px;
+}
 .draggable{
     border-color: black;
     border-width: 2px;
@@ -34,12 +39,37 @@
 #motherboard{
     width: 1200px;
 }
+#motherboard #power-dz{
+	position:absolute;
+	top:400px;
+	left: 50px;
+}
+#motherboard #GPU-dz{
+	position:absolute;
+	top:450px;
+	left:500px;
+	width: 500px;
+    height: 150px;
+    border: 2px dotted aliceblue;
+}
 #motherboard img{
     width: 100%;
+}
+#Graphics{
+	position:absolute;
+	top:700px;
+	left:600px;
 }
 .ram-dz{
     width: 90px;
     height: 300px;
+    border-style: dashed;
+    border-color: aliceblue;
+    border-width: 2px;
+}
+.ps-dz{
+    width: 270px;
+    height: 200px;
     border-style: dashed;
     border-color: aliceblue;
     border-width: 2px;
