@@ -1,28 +1,35 @@
-.draggable{
-    width: auto;
-    height: auto;
-    position: absolute;
-    top: 10%;
-    left: 10%;
-}
 .ram{
-    width: 7%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
-.ram img{
-    width:100%;
-    height:auto;
+.draggable{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+}
+#motherboard #ram-dz1{
+    position: absolute;
+    top: 60px;
+    left: 460px;
+}
+#motherboard #ram-dz2{
+    position: absolute;
+    top: 50px;
+    left: 850px;
 }
 #motherboard{
-    width: auto;
-    height: auto;
+    width: 1200px;
 }
 #motherboard img{
-    width:60%;
-    height:auto;
+    width: 100%;
 }
-#motherboard .test{
-    width: 10%;
-    background-color: red;
+.ram-dz{
+    width: 90px;
+    height: 300px;
+    border-style: dashed;
+    border-color: aliceblue;
+    border-width: 2px;
 }
 #container{
     position: relative;
