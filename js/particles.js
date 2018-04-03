@@ -19,7 +19,10 @@ function __createParticle__(fileName, parent, xpos, ypos){
 function particleExplosion(parent, cx, cy, numParticles){
     var angle = 360/numParticles;
     var particles = [];
-    
+    var audio = document.getElementById("tada");
+    audio.pause();
+    audio.currentTime = 0;
+    audio.play();
 	for(let i = 0; i < numParticles; i++){
 		let img = __createParticle__("particle.png", parent, cx, cy);
         img.setAttribute("angle", angle*i);

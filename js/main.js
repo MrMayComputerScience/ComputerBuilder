@@ -39,12 +39,13 @@ function setDropzone(selector, accepts){
                     let index;
                     if((index = location.href.indexOf("?id=")) >= 0){
                         index += "?id=".length;
-                        let id = parseInt(location.href.substr(id));
+                        let id = parseInt(location.href.substr(index));
                         frame.src = "index.html?id="+(++id);
                     }
                     else{
                         frame.src = "index.html?id=0";
                     }
+                    console.log("Opening "+frame.src);
                 }
 			},
 	});
